@@ -4,8 +4,8 @@ public class Money : MonoBehaviour
 {
     public int money = 0;
 
-    void Start()
+    public void AddMoney(int amount)
     {
-        Debug.Log(money);
+        money += amount;
     }
 }
