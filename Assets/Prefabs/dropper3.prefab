@@ -9,9 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5518345284254849445}
-  - component: {fileID: 2944422813647922461}
   m_Layer: 0
-  m_Name: CubeSpawner
+  m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,19 +31,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 661453173012129149}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2944422813647922461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5161135756668775086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9acec3cf78ca1cc43a5ecad8425fba10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BasicOreSpawner
-  cubePrefab: {fileID: 6731756493652502404, guid: d66dae3f3ee2f6b4bb0a5984e58a4de7, type: 3}
 --- !u!1001 &1055897667161031318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103,8 +89,30 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: f10fdf03a6de6a44690129c00f3c5870, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5518345284254849445}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f10fdf03a6de6a44690129c00f3c5870, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6537534060804077415}
   m_SourcePrefab: {fileID: 100100000, guid: f10fdf03a6de6a44690129c00f3c5870, type: 3}
+--- !u!1 &172865787709702087 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f10fdf03a6de6a44690129c00f3c5870, type: 3}
+  m_PrefabInstance: {fileID: 1055897667161031318}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6537534060804077415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172865787709702087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9acec3cf78ca1cc43a5ecad8425fba10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BasicOreSpawner
+  oreData: {fileID: 11400000, guid: 65555a6e8d53d8f418f03ddaa983496f, type: 2}
+  spawnPoint: {fileID: 5518345284254849445}
 --- !u!4 &661453173012129149 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f10fdf03a6de6a44690129c00f3c5870, type: 3}

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8260041388101900314}
   - component: {fileID: 8308981610404510675}
   - component: {fileID: 813361603861080874}
+  - component: {fileID: 2549311362038242888}
   m_Layer: 0
   m_Name: Basic Ore
   m_TagString: Cube
@@ -140,3 +141,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 16
   m_CollisionDetection: 0
+--- !u!114 &2549311362038242888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6731756493652502404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d17b22439972794bb13ab80c03c6093, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ore
+  data: {fileID: 11400000, guid: 65555a6e8d53d8f418f03ddaa983496f, type: 2}

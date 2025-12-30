@@ -3,19 +3,15 @@ using UnityEngine;
 public class CubeDestroyer : MonoBehaviour
 {
     public Money money;
-    public int moneyPerCube = 1;
 
     void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("Cube")) return;
+        Ore ore = other.GetComponent<Ore>();
+        if (ore == null || ore.data == null) return;
 
-        // 💰 give money ONCE
-        if (money != null)
-        {
-            money.AddMoney(moneyPerCube);
-        }
+        // 💰 give money based on ore type
+        money.AddMoney(ore.data.moneyValue);
 
-        // 💥 destroy the cube
         Destroy(other.gameObject);
     }
 }
