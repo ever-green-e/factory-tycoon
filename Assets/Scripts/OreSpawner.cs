@@ -3,7 +3,7 @@ using System.Collections;
 
 public class OreSpawner : MonoBehaviour
 {
-    public OreData oreData;      // 👈 THIS fixes the error
+    public OreData oreData;
     public Transform spawnPoint;
 
     void Start()
@@ -20,6 +20,9 @@ public class OreSpawner : MonoBehaviour
                 spawnPoint.position,
                 spawnPoint.rotation
             );
+
+            // 🧹 auto-despawn after 10 seconds
+            Destroy(ore, 10f);
 
             // assign ore data
             Ore oreComponent = ore.GetComponent<Ore>();
