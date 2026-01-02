@@ -1,41 +1,57 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class DropperPurchaseButton : MonoBehaviour
 {
-    public GameObject dropperPrefabToPlace;
-    public int dropperAnchorIndex = -1;
+    [Header("Cost")]
+    public int cost = 50;
 
-    public GameObject buttonPrefabToUnlock;
-    public int buttonAnchorIndex = -1;
+    [Header("Droppers to Place")]
+    public List<GameObject> dropperPrefabs;
+    public List<int> dropperAnchorIndices;
 
-    private bool purchased;
+    [Header("Buttons to Unlock")]
+    public List<GameObject> buttonPrefabs;
+    public List<int> buttonAnchorIndices;
+
+    private bool purchased = false;
 
     void OnTriggerEnter(Collider other)
     {
         if (purchased) return;
         if (!other.CompareTag("Player")) return;
 
-        // Place dropper
-        if (dropperPrefabToPlace != null && dropperAnchorIndex >= 0)
+        // 💰 CHECK MONEY FIRST
+        if (!Money.Instance.CanAfford(cost))
+        {
+            Debug.Log("Not enough money!");
+            return;
+        }
+
+        // 💸 SPEND MONEY
+        Money.Instance.Spend(cost);
+
+        // 🏭 Place droppers
+        for (int i = 0; i < Mathf.Min(dropperPrefabs.Count, dropperAnchorIndices.Count); i++)
         {
             Transform anchor =
-                PlacementManager.Instance.GetDropperAnchor(dropperAnchorIndex);
+                PlacementManager.Instance.GetDropperAnchor(dropperAnchorIndices[i]);
 
             Instantiate(
-                dropperPrefabToPlace,
+                dropperPrefabs[i],
                 anchor.position,
                 anchor.rotation
             );
         }
 
-        // Unlock next button
-        if (buttonPrefabToUnlock != null && buttonAnchorIndex >= 0)
+        // 🔓 Unlock new buttons
+        for (int i = 0; i < Mathf.Min(buttonPrefabs.Count, buttonAnchorIndices.Count); i++)
         {
             Transform anchor =
-                PlacementManager.Instance.GetButtonAnchor(buttonAnchorIndex);
+                PlacementManager.Instance.GetButtonAnchor(buttonAnchorIndices[i]);
 
             Instantiate(
-                buttonPrefabToUnlock,
+                buttonPrefabs[i],
                 anchor.position,
                 anchor.rotation
             );

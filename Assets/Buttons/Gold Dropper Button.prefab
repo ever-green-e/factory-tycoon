@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 346854203403998347}
   - component: {fileID: 659820889789894152}
   m_Layer: 0
-  m_Name: Iron Dropper Button
+  m_Name: Gold Dropper Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,13 +128,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a5aa292e7bb84743a571f9224202a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropperPurchaseButton
-  cost: 0
+  cost: 10
   dropperPrefabs:
-  - {fileID: 172865787709702087, guid: 0c678e117a472b34a8907a419e9245a3, type: 3}
-  dropperAnchorIndices: 03000000
-  buttonPrefabs:
-  - {fileID: 6947215174975001098, guid: 16f762053b4799343ab10930440fc174, type: 3}
-  buttonAnchorIndices: 01000000
+  - {fileID: 172865787709702087, guid: f4a57429c8ab3b149afbdc4f46f67de1, type: 3}
+  dropperAnchorIndices: 04000000
+  buttonPrefabs: []
+  buttonAnchorIndices: 
 --- !u!1 &7644575977951669629
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +199,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Iron Dropper : Free'
+  m_text: 'Gold Dropper : 10'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
