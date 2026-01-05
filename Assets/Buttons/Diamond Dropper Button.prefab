@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 346854203403998347}
   - component: {fileID: 659820889789894152}
   m_Layer: 0
-  m_Name: Gold Dropper Button
+  m_Name: Diamond Dropper Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,13 +128,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a5aa292e7bb84743a571f9224202a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropperPurchaseButton
-  cost: 10
+  cost: 50
   dropperPrefabs:
-  - {fileID: 172865787709702087, guid: f4a57429c8ab3b149afbdc4f46f67de1, type: 3}
-  dropperAnchorIndices: 04000000
-  buttonPrefabs:
-  - {fileID: 6947215174975001098, guid: dfa05f7e699abcd418e0500aa6e0a369, type: 3}
-  buttonAnchorIndices: 02000000
+  - {fileID: 172865787709702087, guid: 07f2cc7c62149b747bd1cafbac1942eb, type: 3}
+  dropperAnchorIndices: 05000000
+  buttonPrefabs: []
+  buttonAnchorIndices: 
 --- !u!1 &7644575977951669629
 GameObject:
   m_ObjectHideFlags: 0

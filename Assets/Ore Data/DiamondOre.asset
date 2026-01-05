@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f781695f089bdc545ac286731e3a664a, type: 3}
   m_Name: DiamondOre
   m_EditorClassIdentifier: Assembly-CSharp::OreData
-  orePrefab: {fileID: 0}
-  spawnInterval: 1
-  oreColor: {r: 1, g: 1, b: 1, a: 1}
+  orePrefab: {fileID: 6731756493652502404, guid: 60b43451d33f0024681f79697be09f34, type: 3}
+  spawnInterval: 5
+  oreColor: {r: 0.29803923, g: 0.7725491, b: 0.7803922, a: 1}
+  moneyValue: 3

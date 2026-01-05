@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: GoldOre
   m_EditorClassIdentifier: Assembly-CSharp::OreData
   orePrefab: {fileID: 6731756493652502404, guid: a743c36f62b4e03429a11155c7a615c2, type: 3}
-  spawnInterval: 1.5
+  spawnInterval: 5
   oreColor: {r: 0.9529412, g: 0.8666667, b: 0.3019608, a: 1}
   moneyValue: 2

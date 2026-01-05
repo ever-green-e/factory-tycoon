@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: IronOre
   m_EditorClassIdentifier: Assembly-CSharp::OreData
   orePrefab: {fileID: 6731756493652502404, guid: d66dae3f3ee2f6b4bb0a5984e58a4de7, type: 3}
-  spawnInterval: 1
+  spawnInterval: 5
   oreColor: {r: 1, g: 1, b: 1, a: 1}
   moneyValue: 1
